@@ -21,14 +21,8 @@ body {
     line-height: 1.6;
 }
 
-/* Remove home-page class background */
-.home-page {
-    /* Remove background-image property - we'll move it to sections */
-}
-
 /* Add overlay to each section for better readability */
 .home-page::before {
-    /* Remove this overlay as we'll handle it per section */
     display: none;
 }
 
