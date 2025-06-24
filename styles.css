@@ -4,7 +4,7 @@
     --bg-color: #121212;
     --text-color: #ffffff;
     --card-bg: #1e1e1e;
-    --accent-color: #ff1582;
+    --accent-color: #ff3593;
     --error-color: #cf6679;
 }
 
@@ -47,13 +47,13 @@ body {
 /* Second background section */
 .section-bg2 {
     background-image: url('assets/bck2.jpg');
-    padding-top: 4rem;
+    padding-top: 5rem;
 }
 
 /* Third background section */
 .section-bg3 {
     background-image: url('assets/bck3.png');
-    padding-top: 4rem;
+    padding-top: 5rem;
 }
 
 /* Add overlay to each section for better readability */
@@ -417,13 +417,6 @@ footer {
     white-space: nowrap; /* Prevent text from wrapping */
 }
 
-.contact-info {
-    display: flex;
-    flex-shrink: 1; /* Allow shrinking if needed */
-    gap: 1rem; /* Reduced gap */
-    min-width: 0; /* Allow text to be truncated */
-}
-
 .contact-item {
     display: flex;
     align-items: center;
@@ -569,6 +562,6 @@ footer {
     }
 
     .section-bg2, .section-bg3 {
-        padding-top: 3rem;
+        padding-top: 4rem;
     }
 }
