@@ -47,11 +47,13 @@ body {
 /* Second background section */
 .section-bg2 {
     background-image: url('assets/bck2.jpg');
+    padding-top: 4rem;
 }
 
 /* Third background section */
 .section-bg3 {
     background-image: url('assets/bck3.png');
+    padding-top: 4rem;
 }
 
 /* Add overlay to each section for better readability */
@@ -549,7 +551,11 @@ footer {
     }
 
     .social-links i{
-        font-size: 0.8rem;
+        font-size: 0.7rem;
+    }
+
+    .contact-item {
+        font-size: 0.7rem; /* Even smaller font on mobile */
     }
 
     .mascot-image {
@@ -560,5 +566,9 @@ footer {
 
     .member-card h3, .cell-card h3, .event-card h3, .activity-card h3 {
         font-size: 0.8rem;
+    }
+
+    .section-bg2, .section-bg3 {
+        padding-top: 3rem;
     }
 }
