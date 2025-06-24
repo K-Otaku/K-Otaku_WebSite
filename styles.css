@@ -297,6 +297,7 @@ p {
 .member-card h3, .cell-card h3, .event-card h3, .activity-card h3 {
     padding: 15px 15px 5px;
     color: var(--accent-color);
+    font-size: 0.95rem;
 }
 
 .member-card p, .cell-card p, .event-card p, .activity-card p {
@@ -487,6 +488,10 @@ footer {
     .mascot-image {
         max-width: 120px;
     }
+
+    .member-card h3, .cell-card h3, .event-card h3, .activity-card h3 {
+        font-size: 0.85rem;
+    }
 }
 
 @media (max-width: 576px) {
@@ -531,5 +536,9 @@ footer {
         max-width: 100px;
         right: -10px;
         bottom: -10px;
+    }
+
+    .member-card h3, .cell-card h3, .event-card h3, .activity-card h3 {
+        font-size: 0.8rem;
     }
 }
