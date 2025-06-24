@@ -107,6 +107,26 @@ body {
     transform: translateY(-5px) rotate(5deg);
 }
 
+/* Section Divider */
+.section-divider {
+    position: relative;
+    z-index: 10;
+    height: 0; /* No height to avoid affecting layout */
+    margin: 0;
+    padding: 0;
+    pointer-events: none; /* Allows clicking through the divider */
+}
+
+.section-divider img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    transform: translateY(-50%); /* Center the image vertically around its position */
+    filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.4));;
+}
+
 /* Adjust section margins */
 main > section {
     margin-bottom: 0;
