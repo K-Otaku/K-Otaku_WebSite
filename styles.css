@@ -8,6 +8,12 @@
     --error-color: #cf6679;
 }
 
+/* Page specific colors */
+.about-page {
+    --accent-color: rgb(238, 40, 40);
+    --secondary-color: rgb(238, 59, 59);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -27,7 +33,7 @@ body {
 }
 
 /* Section Backgrounds */
-.section-bg1, .section-bg2, .section-bg3 {
+.section-bg1, .section-bg2, .section-bg3, .section-bg4, .section-bg5 {
     position: relative;
     padding: 3rem 0;
     background-size: cover;
@@ -56,8 +62,18 @@ body {
     padding-top: 5rem;
 }
 
+.section-bg4 {
+    background-image: url('assets/bck4.jpg');
+    padding-top: 5rem;
+}
+
+.section-bg5 {
+    background-image: url('assets/bck4.jpg');
+    padding-top: 5rem;
+}
+
 /* Add overlay to each section for better readability */
-.section-bg1::before, .section-bg2::before, .section-bg3::before {
+.section-bg1::before, .section-bg2::before, .section-bg3::before, .section-bg4::before, .section-bg5::before {
     content: '';
     position: absolute;
     top: 0;
@@ -69,7 +85,7 @@ body {
 }
 
 /* Ensure content is positioned correctly relative to background */
-.section-bg1 > *, .section-bg2 > *, .section-bg3 > * {
+.section-bg1 > *, .section-bg2 > *, .section-bg3 > *, .section-bg4 > *, .section-bg5 > * {
     position: relative;
     z-index: 1;
 }
@@ -561,7 +577,7 @@ footer {
         font-size: 0.8rem;
     }
 
-    .section-bg2, .section-bg3 {
+    .section-bg2, .section-bg3, .section-bg4, .section-bg5 {
         padding-top: 4rem;
     }
 }
