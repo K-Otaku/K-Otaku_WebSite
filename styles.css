@@ -1,17 +1,15 @@
 :root {
     --primary-color: #6200ea;
-    --secondary-color: #ff61ab;
     --bg-color: #121212;
     --text-color: #ffffff;
     --card-bg: #1e1e1e;
-    --accent-color: #ff3593;
+    --accent-color: #ff3996;
     --error-color: #cf6679;
 }
 
 /* Page specific colors */
 .about-page {
     --accent-color: rgb(238, 40, 40);
-    --secondary-color: rgb(238, 59, 59);
 }
 
 * {
@@ -58,7 +56,7 @@ body {
 
 /* Third background section */
 .section-bg3 {
-    background-image: url('assets/bck3.png');
+    background-image: url('assets/bck3.jpg');
     padding-top: 5rem;
 }
 
@@ -229,6 +227,7 @@ h2 {
     text-align: center;
     position: relative;
     padding-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 h2::after {
@@ -239,7 +238,7 @@ h2::after {
     transform: translateX(-50%);
     width: 100px;
     height: 3px;
-    background-color: var(--secondary-color);
+    background-color: var(--accent-color);
 }
 
 p {
@@ -278,7 +277,7 @@ p {
 
 /* Improved navigation buttons positioning */
 .swiper-button-next, .swiper-button-prev {
-    color: var(--secondary-color);
+    color: var(--accent-color);
     width: 40px;
     height: 40px;
 }
@@ -286,7 +285,7 @@ p {
 .swiper-button-next:after, .swiper-button-prev:after {
     font-size: 1.5rem;
     font-weight: bold;
-    color: var(--secondary-color);
+    color: var(--accent-color);
 }
 
 .swiper-pagination {
@@ -300,7 +299,7 @@ p {
 }
 
 .swiper-pagination-bullet-active {
-    background: var(--secondary-color) !important; /* Ensure this overrides any other styles */
+    background: var(--accent-color) !important; /* Ensure this overrides any other styles */
 }
 
 /* Fix card appearance within slides */
@@ -369,7 +368,7 @@ p {
 
 .contact-detail i {
     font-size: 1.5rem;
-    color: var(--secondary-color);
+    color: var(--accent-color);
     margin-right: 1rem;
 }
 
@@ -452,11 +451,11 @@ footer {
 }
 
 .social-links i {
-    color: var(--secondary-color);
+    color: var(--accent-color);
 }
 
 .contact-item i {
-    color: var(--secondary-color);
+    color: var(--accent-color);
 }
 
 /* Responsive Design */
