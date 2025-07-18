@@ -12,6 +12,36 @@
     --accent-color: rgb(238, 40, 40);
 }
 
+/* Contact page specific colors */
+.contact-page {
+    --accent-color: #f78820; /* Purple accent color */
+}
+
+/* Adjust contact containers height */
+.contact-page .contact-form-container {
+    padding: 1rem;  /* Reduced from 2rem */
+    max-height: 500px; /* Set a maximum height */
+}
+
+.contact-page input, 
+.contact-page textarea {
+    padding: 8px 15px; /* Reduced padding from 10px */
+    resize: none;
+}
+
+.contact-page button {
+    padding: 10px 20px; /* Slightly smaller button */
+    background-color: var(--accent-color);
+}
+
+.contact-page button:hover {
+    background-color: #f89d48;
+}
+
+.contact-page h2 {
+    font-size: 1.4rem;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -31,7 +61,7 @@ body {
 }
 
 /* Section Backgrounds */
-.section-bg1, .section-bg2, .section-bg3, .section-bg4, .section-bg5 {
+.section-bg1, .section-bg2, .section-bg3, .section-bg4, .section-bg5, .section-bg6 {
     position: relative;
     padding: 3rem 0;
     background-size: cover;
@@ -70,8 +100,13 @@ body {
     padding-top: 5rem;
 }
 
+.section-bg6 {
+    background-image: url('assets/bck6.jpg');
+    padding-top: 3rem;
+}
+
 /* Add overlay to each section for better readability */
-.section-bg1::before, .section-bg2::before, .section-bg3::before, .section-bg4::before, .section-bg5::before {
+.section-bg1::before, .section-bg2::before, .section-bg3::before, .section-bg4::before, .section-bg5::before, .section-bg6::before {
     content: '';
     position: absolute;
     top: 0;
@@ -83,7 +118,7 @@ body {
 }
 
 /* Ensure content is positioned correctly relative to background */
-.section-bg1 > *, .section-bg2 > *, .section-bg3 > *, .section-bg4 > *, .section-bg5 > * {
+.section-bg1 > *, .section-bg2 > *, .section-bg3 > *, .section-bg4 > *, .section-bg5 > *, .section-bg6 > * {
     position: relative;
     z-index: 1;
 }
@@ -345,13 +380,11 @@ p {
 /* Contact Page */
 .contact-container {
     display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
     justify-content: center;
     margin-top: 2rem;
 }
 
-.contact-info-container, .contact-form-container {
+.contact-form-container {
     flex: 1;
     min-width: 300px;
     background-color: var(--card-bg);
@@ -576,7 +609,7 @@ footer {
         font-size: 0.8rem;
     }
 
-    .section-bg2, .section-bg3, .section-bg4, .section-bg5 {
+    .section-bg2, .section-bg3, .section-bg4, .section-bg5, .section-bg6 {
         padding-top: 4rem;
     }
 }
