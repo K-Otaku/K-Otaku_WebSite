@@ -3,7 +3,7 @@
     --bg-color: #121212;
     --text-color: #ffffff;
     --card-bg: #1e1e1e;
-    --accent-color: #ff3996;
+    --accent-color: #ff7dba;
     --error-color: #cf6679;
 }
 
@@ -129,7 +129,7 @@ body {
     max-width: 800px;
     margin: 0 auto 3rem;
     padding: 2rem;
-    background-color: rgba(30, 30, 30, 0.5); /* Semi-transparent background */
+    background-color: rgba(30, 30, 30, 0.4); /* Semi-transparent background */
     backdrop-filter: blur(8px); /* Creates the blur effect */
     -webkit-backdrop-filter: blur(8px); /* For Safari support */
     border-radius: 10px;
@@ -156,6 +156,7 @@ body {
 
 .mascot-image:hover {
     transform: translateY(-5px) rotate(5deg);
+    cursor: pointer;
 }
 
 /* Section Divider */
@@ -228,7 +229,7 @@ nav a {
     font-weight: 500;
     transition: color 0.3s;
     padding: 5px 10px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 
 nav a:hover, nav a.active {
@@ -262,7 +263,7 @@ h2 {
     text-align: center;
     position: relative;
     padding-bottom: 10px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 h2::after {
@@ -358,6 +359,7 @@ p {
 .member-card:hover, .cell-card:hover, .event-card:hover, .activity-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
 }
 
 .member-card img, .cell-card img, .event-card img, .activity-card img {
@@ -503,8 +505,8 @@ footer {
 
     .mascot-image {
         max-width: 130px;
-        right: -15px;
-        bottom: -15px;
+        right: -10px;
+        bottom: -10px;
     }
 }
 
@@ -550,6 +552,8 @@ footer {
 
     .mascot-image {
         max-width: 120px;
+        right: -10px;
+        bottom: -10px;
     }
 
     .member-card h3, .cell-card h3, .event-card h3, .activity-card h3 {
@@ -601,8 +605,6 @@ footer {
 
     .mascot-image {
         max-width: 100px;
-        right: -10px;
-        bottom: -10px;
     }
 
     .member-card h3, .cell-card h3, .event-card h3, .activity-card h3 {
