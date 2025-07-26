@@ -148,6 +148,7 @@ body {
     max-width: 150px;
     filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.5));
     transition: transform 0.3s ease;
+    cursor: pointer;
 }
 
 .mascot-image img {
@@ -157,7 +158,6 @@ body {
 
 .mascot-image:hover {
     transform: translateY(-5px) rotate(5deg);
-    cursor: pointer;
 }
 
 /* Section Divider */
@@ -205,6 +205,7 @@ header {
     left: 1rem;
     display: flex;
     align-items: center;
+    cursor: pointer;
     /* Remove gap property as it's no longer needed with just one logo */
 }
 
@@ -264,7 +265,7 @@ h2 {
     text-align: center;
     position: relative;
     padding-bottom: 10px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 
 h2::after {
@@ -357,12 +358,12 @@ p {
     transition: transform 0.3s, box-shadow 0.3s;
     width: 280px;
     height: 350px;
+    cursor: pointer;
 }
 
 .member-card:hover, .cell-card:hover, .event-card:hover, .activity-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-    cursor: pointer;
 }
 
 .member-card img, .cell-card img, .event-card img, .activity-card img {
@@ -460,14 +461,36 @@ button:hover {
 /* Footer */
 footer {
     background-color: #0a0a0a;
-    padding: 1.5rem 1rem; /* Reduced padding */
+    background-image: url('assets/page-bottom-bg1.jpg'); /* Add a background image */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding: 1.5rem 1rem;
     display: flex;
-    flex-wrap: nowrap; /* Prevent wrapping to second line */
+    flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
-    gap: 0.5rem; /* Reduced gap */
-    overflow-x: auto; /* Allow horizontal scrolling if needed */
-    white-space: nowrap; /* Prevent text from wrapping */
+    gap: 0.5rem;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+/* Add overlay for better readability */
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(10, 10, 10, 0.5);
+    z-index: 0;
+}
+
+/* Ensure footer content is positioned correctly */
+footer > * {
+    position: relative;
+    z-index: 1;
 }
 
 .contact-item {
@@ -485,7 +508,10 @@ footer {
 
 .social-links a {
     width: 35px; /* Slightly smaller */
-    height: 35px; /* Slightly smaller */
+    text-decoration-line: none;
+    display: flex;           /* Make it a flex container */
+    justify-content: center; /* Center horizontally */
+    align-items: center;     /* Center vertically */
 }
 
 .social-links i {
@@ -494,6 +520,18 @@ footer {
 
 .contact-item i {
     color: var(--accent-color);
+}
+
+.contact-info, .social-links {
+    padding: 5px 10px;
+    border-width: 1px;
+    border-color: var(--accent-color);
+    border-style: solid;
+    border-radius: 10px;
+
+    background-color: rgba(30, 30, 30, 0.4);
+    backdrop-filter: blur(8px); /* Creates the blur effect */
+    -webkit-backdrop-filter: blur(8px); /* For Safari support */
 }
 
 /* Responsive Design */
@@ -550,7 +588,6 @@ footer {
     
     .social-links a {
         width: 30px; /* Smaller icons on mobile */
-        height: 30px; /* Smaller icons on mobile */
     }
 
     .mascot-image {
@@ -617,6 +654,39 @@ footer {
     .section-bg2, .section-bg3, .section-bg4, .section-bg5, .section-bg6 {
         padding-top: 0; /* Remove fixed padding */
     }
+
+    /* Hide swiper navigation buttons on mobile - more specific and with !important */
+    .swiper-container .swiper-button-next,
+    .swiper-container .swiper-button-prev,
+    .swiper .swiper-button-next,
+    .swiper .swiper-button-prev,
+    .bureau-swiper .swiper-button-next,
+    .bureau-swiper .swiper-button-prev,
+    .cells-swiper .swiper-button-next, 
+    .cells-swiper .swiper-button-prev,
+    div[class*="-swiper"] .swiper-button-next,
+    div[class*="-swiper"] .swiper-button-prev {
+        display: none !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
+    }
+    
+    /* Hide swiper navigation buttons on mobile */
+    .swiper-button-next, 
+    .swiper-button-prev {
+        display: none;
+    }
+    
+    /* Make pagination more prominent since it's the only navigation */
+    .swiper-pagination {
+        margin-top: 1.5rem;
+    }
+    
+    .swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
+    }
 }
 
 @media (max-width: 400px) {
@@ -664,8 +734,4 @@ footer {
         -webkit-touch-callout: none;
         user-select: none;
     }
-}
-
-@media only screen and (max-width: 576px) {
-
 }
