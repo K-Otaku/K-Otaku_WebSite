@@ -63,46 +63,47 @@ body {
 /* Section Backgrounds */
 .section-bg1, .section-bg2, .section-bg3, .section-bg4, .section-bg5, .section-bg6 {
     position: relative;
-    padding: 3rem 0;
+    padding: 0; /* Remove default padding */
     background-size: cover;
     background-position: center;
     width: 100%;
     display: flex;
     justify-content: center;
+    align-items: center; /* Center content vertically */
     height: 100vh;
 }
 
 /* First background section */
 .section-bg1 {
     background-image: url('assets/bck1.jpg');
-    padding-top: 8rem; /* Add padding to account for fixed header */
+    padding-top: 0; /* Remove fixed padding */
 }
 
 /* Second background section */
 .section-bg2 {
     background-image: url('assets/bck2.jpg');
-    padding-top: 5rem;
+    padding-top: 0; /* Remove fixed padding */
 }
 
 /* Third background section */
 .section-bg3 {
     background-image: url('assets/bck3.jpg');
-    padding-top: 5rem;
+    padding-top: 0; /* Remove fixed padding */
 }
 
 .section-bg4 {
     background-image: url('assets/bck4.jpg');
-    padding-top: 5rem;
+    padding-top: 0; /* Remove fixed padding */
 }
 
 .section-bg5 {
     background-image: url('assets/bck5.jpg');
-    padding-top: 5rem;
+    padding-top: 0; /* Remove fixed padding */
 }
 
 .section-bg6 {
     background-image: url('assets/bck6.jpg');
-    padding-top: 3rem;
+    padding-top: 0; /* Remove fixed padding */
 }
 
 /* Add overlay to each section for better readability */
@@ -347,7 +348,9 @@ p {
 
 /* Cards */
 .member-card, .cell-card, .event-card, .activity-card {
-    background-color: var(--card-bg);
+    background-color: rgba(30, 30, 30, 0.8); /* Semi-transparent background */
+    backdrop-filter: blur(8px); /* Creates the blur effect */
+    -webkit-backdrop-filter: blur(8px); /* For Safari support */
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
@@ -612,6 +615,57 @@ footer {
     }
 
     .section-bg2, .section-bg3, .section-bg4, .section-bg5, .section-bg6 {
-        padding-top: 4rem;
+        padding-top: 0; /* Remove fixed padding */
     }
+}
+
+@media (max-width: 400px) {
+    nav ul li {
+        margin: 0;
+        padding: 0;
+    }
+
+    nav ul li a {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 350px) {
+    nav ul li a {
+        padding: 3px 7px;
+    }
+}
+
+@media only screen {
+    /* Remove blue highlight rectangle on tap for all elements */
+    * {
+        -webkit-tap-highlight-color: transparent;
+    }
+    
+    /* Fix syntax error in previous selector */
+    a, button, input, select, textarea, [role="button"], [tabindex]:not([tabindex="-1"]), img {
+        -webkit-tap-highlight-color: transparent;
+        outline: none;
+    }
+
+    /* Specific fix for mascot image */
+    .mascot-image, .mascot-image img, a .mascot-image {
+        -webkit-tap-highlight-color: transparent !important;
+        outline: none;
+        -webkit-touch-callout: none; /* Prevents save image menu on iOS */
+        user-select: none; /* Prevents selection */
+    }
+
+    /* Fix for swapper elements */
+    .swapper, .swapper-item, [data-swapper], .swappable, 
+    .carousel-item, .slider-element, .toggle-element {
+        -webkit-tap-highlight-color: transparent !important;
+        outline: none;
+        -webkit-touch-callout: none;
+        user-select: none;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+
 }
