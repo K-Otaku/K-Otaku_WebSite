@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-  // Initialize all Swiper instances
   const eventsSwiper = new Swiper('.events-swiper', {
       loop: true,
       slidesPerView: 1,
@@ -13,12 +12,10 @@ document.addEventListener('DOMContentLoaded', function() {
           prevEl: '.swiper-button-prev',
       },
       breakpoints: {
-          // When window width is >= 576px
           576: {
               slidesPerView: 2,
               spaceBetween: 20
           },
-          // When window width is >= 992px
           992: {
               slidesPerView: 3,
               spaceBetween: 30
@@ -39,12 +36,10 @@ document.addEventListener('DOMContentLoaded', function() {
           prevEl: '.swiper-button-prev',
       },
       breakpoints: {
-          // When window width is >= 576px
           576: {
               slidesPerView: 2,
               spaceBetween: 20
           },
-          // When window width is >= 992px
           992: {
               slidesPerView: 3,
               spaceBetween: 30
