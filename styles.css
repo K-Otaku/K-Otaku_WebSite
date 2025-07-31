@@ -435,7 +435,6 @@ button:hover {
     background-color: var(--accent-color);
 }
 
-/* Custom Alert Styles */
 .custom-alert-overlay {
     position: fixed;
     top: 0;
